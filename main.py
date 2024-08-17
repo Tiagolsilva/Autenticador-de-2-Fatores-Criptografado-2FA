@@ -22,7 +22,7 @@ def generate_and_encrypt_code(counter):
     otp_code = hotp.at(counter)
     print(f"OTP original gerado (contador {counter}): {otp_code}")
 
-    encrypted_code = otp_code.encode()  # Inicialmente, converta o código HOTP para bytes
+    encrypted_code = otp_code.encode()
 
     # Criptografia do código com múltiplas camadas
     for cipher in cipher_layers:
@@ -42,7 +42,7 @@ def decrypt_code(encrypted_code):
     for cipher in reversed(cipher_layers):
         decrypted_code = cipher.decrypt(decrypted_code)
     
-    # Converta o código descriptografado de volta para string
+    # Converte o código descriptografado de volta para string
     final_code = decrypted_code.decode()
     print(f"Código HOTP após descriptografia: {final_code}")
     
