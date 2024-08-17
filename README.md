@@ -1,8 +1,3 @@
-# Autenticador de 2 Fatores Criptografado
- Aqui está uma sugestão de documentação para o seu projeto no GitHub:
-
----
-
 # Sistema de Autenticação de Dois Fatores com Criptografia Múltipla
 
 Este projeto demonstra um sistema de autenticação de dois fatores (2FA) usando HOTP (HMAC-Based One-Time Password) com criptografia múltipla. Ele utiliza a biblioteca `pyotp` para gerar códigos HOTP e a biblioteca `cryptography` para criptografar e descriptografar esses códigos com múltiplas camadas de criptografia.
